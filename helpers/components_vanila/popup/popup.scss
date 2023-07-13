@@ -18,8 +18,8 @@
 
 	padding: 2rem;
 
-	background-color: rgba($black, .96);
-	transition: opacity .3s ease;
+	background-color: rgba($black, 0.96);
+	transition: opacity 0.3s ease;
 	will-change: opacity;
 
 	&:not(.popup--open_state) {
@@ -55,13 +55,13 @@
 	width: 3.4rem;
 	height: 3.4rem;
 
-	transition: opacity .3s ease;
+	transition: opacity 0.3s ease;
 	will-change: opacity;
 	cursor: pointer;
 
 	&:hover,
 	&:focus {
-		opacity: .8;
+		opacity: 0.8;
 	}
 
 	&::before,
@@ -76,7 +76,8 @@
 		content: '';
 		background-color: #fff;
 
-		.popup_close:hover & {}
+		.popup_close:hover & {
+		}
 	}
 
 	&::before {

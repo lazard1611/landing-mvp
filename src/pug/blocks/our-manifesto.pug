@@ -1,0 +1,35 @@
+-
+	dataManifesto = [
+		{
+			text: 'Habitat is a home for creative souls, united by a single goal - to contribute to the development of our city, country, and the planet.',
+			img: '1',
+		},
+		{
+			text: 'We approach design with flexibility. There is nothing stable nowadays. Thus we adjust our design approach to every client, every project, and every task.',
+			img: '2',
+		},
+		{
+			text: 'We are not just service providers, we are partners.<br> We partner with startups and product companies who believe that design can solve any user problem. We help them to serve their users and get better.',
+			img: '3',
+		},
+		{
+			text: 'We work with the products we believe in.<br> Today we contribute to the ideas, that will take the lead tomorrow.',
+			img: '4',
+		},
+	]
+
+section.section.our_manifesto.js-section-trigger.js-our-manifesto-section
+	.our_manifesto__in
+		h2.our_manifesto__title.js-title-split Our Manifesto.
+		.our_manifesto__wrap
+			each item, index in dataManifesto
+				.our_manifesto__item.js-our-manifesto-item(class=`${index === 0 ? 'our_manifesto__item--active_state' : ''}`)
+					p!= item.text
+					+picture({
+						media: 991,
+						img: `our_manifesto/${item.img}.jpg`,
+						img_mob: `our_manifesto/${item.img}_mob.jpg`,
+						class: 'our_manifesto__pic',
+						img_class: 'our_manifesto__img',
+						alt: 'Our Manifesto',
+					})

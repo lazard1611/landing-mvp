@@ -2,7 +2,8 @@ $icon_font_name: 'iconfont';
 @font-face {
 	font-family: $icon_font_name;
 	src: url('../fonts/icons/iconfont.eot');
-	src: url('../fonts/icons/iconfont.eot?#iefix') format('eot'), url('../fonts/icons/iconfont.woff') format('woff'), url('../fonts/icons/iconfont.ttf') format('truetype'),
+	src: url('../fonts/icons/iconfont.eot?#iefix') format('eot'),
+		url('../fonts/icons/iconfont.woff') format('woff'), url('../fonts/icons/iconfont.ttf') format('truetype'),
 		url('../fonts/icons/iconfont.svg#iconfont') format('svg');
 }
 

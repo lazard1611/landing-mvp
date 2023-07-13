@@ -1,16 +1,22 @@
 //---------------------------------------------fonts
 $font_path: '../fonts/';
-$font_1: 'RobotoCondensed', sans-serif;
+$font_1: 'Epilogue', sans-serif;
+$font_2: 'Montserrat', sans-serif;
+$font_3: 'Syne', sans-serif;
 $font_size_base: 1.6rem;
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
+$black_2: #3b3d40;
+$black_3: #4e5356;
+$black_dolphin: #18181a;
+$gray: #b8bec8;
 
-$color_text_base: $black;
+$color_text_base: $white;
 $color_link_base: #4aa3df;
-$body_bg: $white;
+$body_bg: $black;
 //---------------------------------------------colors###
 
 //---------------------------------------------z-index
@@ -32,8 +38,8 @@ $gl_radius: 0.5rem;
 
 //---------------------------------------------media points
 $point_1: 1200px;
-$point_2: 1024px;
-$point_3: 1023.5px;
+$point_2: 991px;
+$point_3: 990.5px;
 $point_4: 768px;
 $point_5: 640px;
 $point_6: 480px;

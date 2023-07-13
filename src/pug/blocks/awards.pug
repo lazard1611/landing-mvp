@@ -1,0 +1,52 @@
+-
+	dataAwards_1 = [
+		{
+			img: 'clutch-logo',
+			title: 'x2',
+			description: 'Top B2B Companies Ukraine (2020/2021)',
+		},
+		{
+			img: 'be-logo',
+			title: 'x2',
+			description: 'Web design (2017)',
+		},
+	]
+
+	dataAwards_2 = [
+		{
+			title: '250+',
+			description: 'delivered projects',
+		},
+		{
+			title: '16',
+			description: 'team members',
+		},
+		{
+			title: '5 years',
+			description: 'of experience',
+		},
+		{
+			title: '1',
+			description: 'unicorn grown',
+		},
+	]
+
+section.section.awards.js-section-trigger.js-awards-section
+	.awards__in
+		h2.awards__title.js-title-split Our Awards.
+		.awards__row
+			.awards__col_left.js-awards-item
+				ul.awards__list
+					each item in dataAwards_1
+						li.awards__item
+							.awards__head
+								figure.awards__pic
+									img.awards__img(src=`images/${item.img}.svg` alt= item.img)
+								.awards__item_title!= item.title
+							.awards__item_description!= item.description
+			.awards__col_right.js-awards-item
+				ul.awards__list
+					each item in dataAwards_2
+						li.awards__item
+							.awards__item_title!= item.title
+							.awards__item_description!= item.description

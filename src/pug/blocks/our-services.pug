@@ -1,0 +1,37 @@
+-
+	dataOurServices = [
+		{
+			title: 'Extended design team',
+			description: 'We merge with your team to provide our expertise in web, product, brand, graphic design and solve your business challenges.',
+			img: 'our_services/0.jpg',
+		},
+		{
+			title: 'Improve your product',
+			description: 'In the fast-changing world, digital products and identities need to be constantly updated to the new user\'s needs. Our team will provide informed custom solutions for your existing product.',
+			img: 'our_services/2.jpg',
+		},
+		{
+			title: 'Create a new product',
+			description: 'There is a long path between an idea and a product. Our team will take you through all the necessary stages of discovery and design to create an MVP.',
+			img: 'our_services/3.jpg',
+		},
+	]
+
+section.section.our_services.js-our-services-section.js-section-trigger
+	.our_services__in
+		h2.our_services__title.js-title-split Our services.
+		.our_services__wrap
+			.our_services__items
+				each item, index in dataOurServices
+					.our_services__item.js-our-services-item
+						.our_services__content.js-our-services-content
+							.our_services__content_title!= item.title
+							.our_services__content_description!= item.description
+
+						.our_services__pic_wrap
+							+picture({
+								img: item.img,
+								class: 'our_services__pic js-our-services-picture',
+								img_class: 'our_services__img',
+								alt: 'Our services',
+							})

@@ -1,2 +1,21 @@
 mixin footer
-	footer.footer
+	footer.footer.js-section-trigger.js-footer
+		.footer__head
+			.footer__title
+				h2.js-title-split Have an idea in mind?
+				a(href='#').js-cursor-scale Let's talk.
+		.footer__bottom
+			.footer__row
+				.footer__col_left
+					a(href='#') hello@hbtat.agency
+					small Legal Information
+				.footer__col_right
+					ul.footer__list
+						each item in [{link: 'Medium'}, {link: 'Behance'}, {link: 'Dribbble'},]
+							li
+								a(href='#').js-cursor-scale!= item.link
+
+					ul.footer__list
+						each item in [{link: 'Clutch'}, {link: 'Instagram'}, {link: 'Linked In'},]
+							li
+								a(href='#' target="_blank").js-cursor-scale!= item.link

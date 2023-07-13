@@ -11,10 +11,14 @@ html(lang="en" data-template-name= array.template_name)
 	head
 		+head(array)
 	body(class= array.body_class)
-		.preloader
+		.preloader.js-preload-wrap
+			+loop_while(10)
+				.preloader__item.js-preload-item(data-src=`images/preloader/${i}.jpg`)
 		+header
+		.cursor.js-cursor.js-excluded-element
 		.wrapper(class= array.layout_mod)
-			.base(class= array.layout_mod)
-				block content_block
-			+footer
+			.wrapper_in
+				.base(class= array.layout_mod)
+					block content_block
+				+footer
 		block local_popup

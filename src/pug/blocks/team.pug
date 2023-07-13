@@ -1,0 +1,111 @@
+-
+	dataTeam = [
+		{
+			name: 'Victor Samokhvalov',
+			position: 'Founder & Head of Design',
+			description: '---',
+		},
+		{
+			name: 'Helen Prokopovych',
+			position: 'CEO, POC',
+			description: 'Healthy food and good mood 🥑',
+		},
+		{
+			name: 'Alina Zhaivoron',
+			position: 'Art-director',
+			description: 'Harry Potter collector, knows all the spells ⚡️',
+		},
+		{
+			name: 'Anna Hnap',
+			position: 'Product & Service Designer',
+			description: 'Good at talking not only with people 🐶',
+		},
+		{
+			name: 'Serhiy Trofymchuk',
+			position: 'Product & Service Designer',
+			description: 'Cocktails, the King of Aperoland 🍹',
+		},
+		{
+			name: 'Leonid Maksymyk',
+			position: 'UX / UI Designer',
+			description: 'Yes, I really need all these board games 🎲',
+		},
+		{
+			name: 'Ellen Demchuk',
+			position: 'Product & Service Designer',
+			description: 'Creating beauty not only in digital 🎨',
+		},
+		{
+			name: 'Roksolana Slobodianiuk',
+			position: 'Web & Graphic Designer',
+			description: 'Manga & anime, PSP games, and cozy bed 🍥',
+		},
+		{
+			name: 'Daria Volkoshovets',
+			position: 'Marketing Designer',
+			description: 'Yoga lover, knows all the asanas 🌿',
+		},
+		{
+			name: 'Vasily Tyvonchuk',
+			position: 'Brand Experience Designer',
+			description: 'Italy and rock like cheese and carbonara 🧀',
+		},
+		{
+			name: 'Nazariy Mynzak',
+			position: 'UX / UI Designer',
+			description: '---',
+		},
+		{
+			name: 'Valentina Oliiarnyk',
+			position: 'Project Manager',
+			description: 'Juggling projects and dumbbells like a pro 💪',
+		},
+		{
+			name: 'Dmytro Dedukh',
+			position: 'UX / UI Designer',
+			description: 'In love with extreme, speed, cars and racing 🏎',
+		},
+		{
+			name: 'Oksana Gunko',
+			position: 'Financial Analyst',
+			description: '--- ',
+		},
+		{
+			name: 'Antonina Diadenchuk',
+			position: 'Marketing Designer',
+			description: 'Run, eat, design, sleep, repeat 🥇',
+		},
+		{
+			name: 'Valerie Biletska',
+			position: 'Marketing Designer',
+			description: 'Dance like nobody\'s watching 💃',
+		},
+	]
+
+section.section.team.js-section-trigger.js-team-section.js-header-disable
+	.team__in
+		.team__title_wrap
+			h2.team__title.js-title-split Meet the team.
+			button(aria-label= 'scroll next section').team__button.js-team-btn.js-cursor-scale
+				+icon('chevron_down')
+		ul.team__list
+			each item, index in dataTeam
+				li.team__item.js-team-item
+					.team__item_in
+						.team__pic_wrap
+							+picture({
+								img: `team/${index}.jpg`,
+								class: 'team__pic',
+								img_class: 'team__img',
+								alt: item.name,
+							})
+							+picture({
+								img: `team/${index}_hover.jpg`,
+								class: 'team__pic team__pic--hover_mod',
+								img_class: 'team__img',
+								alt: item.name,
+							})
+						.team__name!= item.name
+						.team__text
+							.team__position!= item.position
+							.team__description!= item.description

@@ -1,0 +1,115 @@
+@import 'ScssHelpers/helpers-all.scss';
+
+.our_manifesto {
+}
+
+.our_manifesto__in {
+}
+
+.our_manifesto__title {
+	font-weight: 300;
+
+	@include bp($point_2, min) {
+		font-size: 8.8rem;
+		line-height: 1.08;
+	}
+
+	@include bp($point_3) {
+		font-size: 3.2rem;
+		line-height: 1.25;
+	}
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 7.2rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 4.8rem;
+		}
+	}
+}
+
+.our_manifesto__wrap {
+	padding-left: var(--left-indent);
+
+	@include bp($point_2, min) {
+		max-width: 87%;
+	}
+}
+
+.our_manifesto__item {
+	position: relative;
+	font-weight: 300;
+	transition: color 0.4s ease;
+
+	&:not(.our_manifesto__item--active_state) {
+		color: $black_2;
+	}
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			padding-bottom: 7.2rem;
+		}
+	}
+
+	@include bp($point_2, min) {
+		font-size: 4rem;
+		line-height: 1.4;
+	}
+
+	@include bp($point_3) {
+		font-size: 2.4rem;
+		line-height: 1.42;
+	}
+}
+
+.our_manifesto__pic {
+	display: block;
+
+	@include bp($point_2, min) {
+		z-index: 100;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 27.2rem;
+		height: 21rem;
+		transition: opacity 0.5s ease;
+	}
+
+	@include bp($point_3) {
+		width: 18.1rem;
+		height: 14rem;
+	}
+
+	&:not(.our_manifesto__pic--active_state) {
+		@include bp($point_2, min) {
+			opacity: 0;
+		}
+	}
+
+	.our_manifesto__item:nth-child(even) & {
+		@include bp($point_3) {
+			margin: 3rem 0 0 0;
+		}
+	}
+
+	.our_manifesto__item:nth-child(odd) & {
+		@include bp($point_3) {
+			margin: 3rem 0 0 auto;
+			position: relative;
+			right: calc(var(--gl-indent) * -1);
+		}
+	}
+
+	&:not(.our_manifesto__item:last-child &) {
+		@include bp($point_3) {
+			margin-bottom: 12rem;
+		}
+	}
+}
+
+.our_manifesto__img {
+	@include contain_img;
+}

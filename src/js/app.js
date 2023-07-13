@@ -1,4 +1,9 @@
 import layout from 'layout/layout';
+import preloader from 'layout/preloader';
+import cursor from 'components/cursor';
+import animation from 'components/animation';
+import smoothAnimation from 'components/smooth-animation';
+import header from 'layout/header';
 import { pageLoad } from './utils';
 
 export default class App {
@@ -31,6 +36,11 @@ export default class App {
 	init() {
 		const initLayout = layout();
 		pageLoad(() => {
+			preloader();
+			cursor();
+			animation();
+			smoothAnimation();
+			header();
 			document.body.classList.add('body--loaded');
 		});
 		setTimeout(() => {

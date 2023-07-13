@@ -1,0 +1,47 @@
+.hero {
+	@include bp($point_2, min) {
+		padding-top: 13.6rem;
+	}
+}
+
+.hero__in {
+}
+
+.hero__title {
+	@include h1;
+	overflow: hidden;
+
+	@include bp($point_2, min) {
+		max-width: 90%;
+	}
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 5.6rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.split-line {
+	&:not(:last-child) {
+		margin-bottom: -0.2em;
+	}
+}
+
+.hero__description_wrap {
+	margin-left: auto;
+
+	@include bp($point_2, min) {
+		width: 50%;
+	}
+}
+
+.hero__description {
+	@include h3;
+	width: 72.7%;
+	margin-left: auto;
+}

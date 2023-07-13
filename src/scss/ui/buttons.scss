@@ -1,3 +1,9 @@
-// .btn_base {
+.btn_small {
+	@include btn_size_small;
+	@include btn_style_dark;
+}
 
-// }
+.btn_normal {
+	@include btn_size_normal_v2;
+	@include btn_style_dark_v2;
+}

@@ -1,0 +1,23 @@
+mixin projects(data)
+	section.section.projects.js-projects-section
+		.projects__in
+			each projItem in data
+				.projects__row.js-projects-row
+					each item, index in projItem.item
+						.projects__col
+							a.projects__item.js-item-projects(class=`${index === 1 ? 'projects__item--small_mod' : ''}` href='#' aria-label=item.title )
+								.projects__pic_wrap
+									each img, index in item.images
+										+picture({
+											img: `projects/${img}`,
+											class: `projects__pic ${index === 1 ? 'projects__pic--hover_mod' : ''}`,
+											img_class: `projects__img ${index === 0 ? 'js-parallax-img' : ''}` ,
+											alt: item.subtitle,
+										})
+								.projects__contents
+									.projects__subtitle.js-projects-subtitle!= item.subtitle
+									h3.projects__title.js-projects-title!= item.title
+									.projects__label_wrap.js-projects-label
+										each btn in item.buttons
+											.projects__label_item
+												.btn_small!= btn

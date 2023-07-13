@@ -48,7 +48,6 @@
 	}
 
 	&[type='search'] {
-
 		// HIDE CLEAR ICON
 		&::-ms-clear,
 		&::-ms-reveal {
@@ -65,7 +64,6 @@
 	}
 
 	&[type='date'] {
-
 		// HIDE CALENDAR ICON
 		&::-webkit-calendar-picker-indicator {
 			opacity: 0;
@@ -73,7 +71,6 @@
 	}
 
 	@at-root {
-
 		// CLEAR DEFAULT SAFARI BG
 		select#{&} {
 			-webkit-tap-highlight-color: transparent;

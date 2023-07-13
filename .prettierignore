@@ -1,5 +1,8 @@
 **/*.min.js
+**/*.projects.js
+**/*.CustomEase.js
 **/*.min.css
+**/*.paths.js
 package-lock.json
 
 **/*.prettierignore

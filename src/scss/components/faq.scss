@@ -1,0 +1,39 @@
+@import 'ScssHelpers/helpers-all.scss';
+
+.faq {
+	@include bp($point_2, min) {
+		padding-bottom: 21rem;
+	}
+}
+
+.faq__in {
+}
+
+.faq__row {
+	@include bp($point_2, min) {
+		display: flex;
+	}
+}
+
+.faq__col_left {
+	@include bp($point_2, min) {
+		width: 44.6%;
+		padding-right: 8rem;
+	}
+
+	&:not(:last-child) {
+		@include bp($point_3) {
+			margin-bottom: 2.4rem;
+		}
+	}
+}
+
+.faq__col_right {
+	@include bp($point_2, min) {
+		width: 55.4%;
+	}
+}
+
+.faq__title {
+	@include h2;
+}

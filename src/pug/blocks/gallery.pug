@@ -1,0 +1,27 @@
+-
+	dataGallery = [
+		{img: '1'},
+		{img: '2'},
+		{img: '3'},
+		{text: ['We strive to work with people who are interested in what they are doing and are ready to experiment', 'Design is all about trying something new. We value those who are not afraid of changes.']},
+		{img: '4'},
+		{img: '5'},
+	]
+
+section.section.gallery.js-gallery-section
+	.gallery__in
+		.gallery__wrap
+			each item in dataGallery
+				.gallery__item.js-gallery-item
+					if item.img
+						+picture({
+							media: 768,
+							img: `gallery/${item.img}.jpg`,
+							img_mob: `gallery/${item.img}_mob.jpg`,
+							class: 'gallery__pic',
+							img_class: 'gallery__img',
+							alt: 'Gallery',
+						})
+					if item.text
+						each p in item.text
+							p!= p

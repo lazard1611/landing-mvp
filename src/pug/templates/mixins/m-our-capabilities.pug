@@ -1,0 +1,9 @@
+mixin our_capabilities(data)
+	section.section.our_capabilities.js-our-capabilities-section.js-section-trigger
+		.our_capabilities__flashlight.js-flashlight
+		.our_capabilities__in
+			h2.our_capabilities__title.js-title-split!= data.title
+			ul.our_capabilities__list
+				each item in data.btn_list
+					li.our_capabilities__item
+						a.btn_normal(href= '#')!= item.btn

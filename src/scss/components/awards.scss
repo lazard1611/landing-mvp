@@ -1,0 +1,188 @@
+@import 'ScssHelpers/helpers-all.scss';
+
+.awards {
+	@include bp($point_2, min) {
+		padding-top: 4rem;
+	}
+
+	@include bp($point_3) {
+		padding-top: 7.6rem;
+	}
+}
+
+.awards__in {
+}
+
+.awards__title {
+	font-size: 3.2rem;
+	font-weight: 300;
+	line-height: 1.25;
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 4.8rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 3.2rem;
+		}
+	}
+}
+
+.awards__row {
+	@include bp($point_2, min) {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+}
+
+.awards__col_left {
+	@include bp($point_2, min) {
+		width: 57.3%;
+		padding-right: 4rem;
+	}
+
+	&:not(:last-child) {
+		@include bp($point_3) {
+			margin-bottom: 5rem;
+		}
+	}
+}
+
+.awards__col_right {
+	@include bp($point_2, min) {
+		width: 42.7%;
+	}
+}
+
+.awards__list {
+	.awards__col_left & {
+		@include bp($point_2, min) {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-wrap: wrap;
+
+			margin: 0 -14.3rem -4rem 0;
+		}
+
+		@include bp($point_3, $point_4) {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-wrap: wrap;
+
+			margin: 0 -4rem -4rem 0;
+		}
+	}
+
+	.awards__col_right & {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		@include bp($point_2, min) {
+			margin: 0 -8rem -4rem 0;
+		}
+
+		@include bp($point_3) {
+			margin: 0 -2rem -5rem 0;
+		}
+	}
+}
+
+.awards__item {
+	.awards__col_left & {
+		@include bp($point_2, min) {
+			padding: 0 14.3rem 4rem 0;
+			max-width: 44.8rem;
+		}
+
+		@include bp($point_3, $point_4) {
+			width: 50%;
+			padding: 0 4rem 4rem 0;
+		}
+
+		&:not(:last-child) {
+			@include bp($point_4 - 1) {
+				margin-bottom: 5rem;
+			}
+		}
+	}
+
+	.awards__col_right & {
+		@include bp($point_2, min) {
+			padding: 0 8rem 4rem 0;
+			max-width: 22.3rem;
+		}
+
+		@include bp($point_3) {
+			padding: 0 2rem 5rem 0;
+
+			&:nth-child(even) {
+				width: 47%;
+			}
+
+			&:nth-child(odd) {
+				width: 53%;
+			}
+		}
+	}
+}
+
+.awards__head {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	flex-wrap: wrap;
+
+	&:not(:last-child) {
+		margin-bottom: 1.4rem;
+	}
+}
+
+.awards__pic {
+	display: block;
+	height: 4.8rem;
+	width: auto;
+
+	&:not(:last-child) {
+		margin-right: 1.6rem;
+	}
+}
+
+.awards__img {
+	@include contain_img;
+}
+
+.awards__item_title {
+	font-size: 3.2rem;
+	font-weight: 400;
+
+	.awards__col_left & {
+		line-height: 1;
+	}
+
+	.awards__col_right & {
+		line-height: 1.5;
+
+		&:not(:last-child) {
+			@include bp($point_2, min) {
+				margin-bottom: 1.4rem;
+			}
+
+			@include bp($point_3) {
+				margin-bottom: 0.2rem;
+			}
+		}
+	}
+}
+
+.awards__item_description {
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 1.75;
+}

@@ -1,2 +1,11 @@
 mixin header
 	header.header
+		.header__in
+			.header__logo_wrap
+				a.header__logo.js-cursor-scale(href='#' aria-label='habitat')
+					.header__logo_svg
+						include ../../blocks/logo
+					.header__logo_svg.header__logo_svg--mob_mod
+						include ../../blocks/logo-mob
+			a.header__btn.js-cursor-scale(href='#')
+				span Hire us

@@ -1,0 +1,11 @@
+-
+	dataLogos = ['angle_list', 'hopin', 'steam_yard', 'fendi', 'oppo', 'little_spoon', 'pause', 'cgtrader', 'dogiz']
+
+section.section.logos.js-section-trigger.js-logos-section
+	.logos__in
+		h2.logos__title.js-title-split Trusted by companies worldwide
+		ul.logos__list
+			each item in dataLogos
+				li.logos__item.js-logos-item
+					figure.logos__figure
+						img.logos__img(src= `images/logos/${item}.svg` alt= item)

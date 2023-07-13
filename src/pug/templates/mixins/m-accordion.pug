@@ -1,0 +1,15 @@
+mixin accordion(data, prefix, mod)
+	- itemClass = prefix ||'accordion_';
+	- itemMod = mod || '';
+
+	ul(class= `${prefix || 'accordion'} ${itemMod} `)
+		each item in data
+			li(class= `${itemClass}_item ${item.trigger || ''}`).js-faq-item.js-cursor-scale
+				button(class= `${itemClass}_item_head` type='button')
+					span(class= `${itemClass}_item_title`)= item.title
+					span(class= `${itemClass}_item_icon`)
+
+				div(class= `${itemClass}_item_body`)
+					if item.descr
+						div(class= `${itemClass}_item_body_in`)= item.descr
+					block

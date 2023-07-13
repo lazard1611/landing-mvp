@@ -1,1 +1,6 @@
-@include font_face('RobotoCondensed-Regular', 'RobotoCondensed', $font_path, 400);
+@include font_face('Epilogue-Light', 'Epilogue', $font_path, 300);
+@include font_face('Epilogue-Regular', 'Epilogue', $font_path, 400);
+@include font_face('Epilogue-Medium', 'Epilogue', $font_path, 500);
+@include font_face('Epilogue-SemiBold', 'Epilogue', $font_path, 600);
+@include font_face('Montserrat-Regular', 'Montserrat', $font_path, 400);
+@include font_face('Syne-Bold', 'Syne', $font_path, 700);

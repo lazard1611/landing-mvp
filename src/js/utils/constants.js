@@ -21,7 +21,7 @@ export const DEFAULT_GSAP_EASE = 'expo';
 // similar css ease — cubic-bezier(.19, 1, .22, 1)
 
 export const BREAKPOINTS = {
-	mediaPoint1: 1024,
+	mediaPoint1: 991,
 	mediaPoint2: 768,
 	mediaPoint3: 480,
 	mediaPoint4: 320,

@@ -1,0 +1,151 @@
+@import 'ScssHelpers/helpers-all.scss';
+
+.gallery {
+	@include bp($point_2, min) {
+		padding-bottom: 4rem;
+	}
+}
+
+.gallery__in {
+}
+
+.gallery__wrap {
+	display: grid;
+
+	width: 100%;
+
+	@include bp($point_2, min) {
+		grid-template-columns: 52.8em 19.4em 7.8em 1fr 52.8em 19.2em;
+		//grid-template-rows: 20.2em 16.8em 20.4em;
+		grid-template-rows: auto 16.8em 20.4em;
+		gap: 3.2em;
+		align-items: end;
+
+		font-size: calc(100vw / 193.7);
+	}
+
+	@include bp($point_3, $point_7) {
+		font-size: calc(100vw / 37.5);
+		//font-size: 10px;
+	}
+
+	@include bp($point_7) {
+		font-size: 1rem;
+	}
+
+	@include bp($point_3) {
+		grid-template-columns: 1fr 16.6em 11.3em;
+		grid-template-rows: 15.2em 11.7em 9em 1fr 17.8em 23.4em;
+		gap: 1.6em;
+	}
+}
+
+.gallery__item {
+	font-size: 1.6rem;
+	font-weight: 300;
+
+	@include bp($point_2, min) {
+		line-height: 1.75;
+	}
+
+	@include bp($point_3) {
+		line-height: 1.5;
+	}
+
+	p {
+		@include bp($point_2, min) {
+			max-width: 76%;
+		}
+	}
+
+	p:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+
+	&:nth-child(6n + 1) {
+		@include bp($point_2, min) {
+			grid-column: 1 / 2;
+			grid-row: 1 / 4;
+		}
+
+		@include bp($point_3) {
+			grid-column: 1 / 3;
+			grid-row: 1 / 3;
+			margin-left: calc(var(--gl-indent) * -1);
+		}
+	}
+
+	&:nth-child(6n + 2) {
+		@include bp($point_2, min) {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+
+		@include bp($point_3) {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+		}
+	}
+
+	&:nth-child(6n + 3) {
+		@include bp($point_2, min) {
+			grid-column: 2 / 4;
+			grid-row: 3 / 4;
+		}
+
+		@include bp($point_3) {
+			grid-column: 2 / 3;
+			grid-row: 3 / 4;
+		}
+	}
+
+	&:nth-child(6n + 4) {
+		@include bp($point_2, min) {
+			grid-column: 5 / 6;
+			grid-row: 1 / 2;
+		}
+
+		@include bp($point_3) {
+			padding: 3rem 0;
+			grid-column: 1 / 4;
+			grid-row: 4 / 5;
+		}
+	}
+
+	&:nth-child(6n + 5) {
+		@include bp($point_2, min) {
+			grid-column: 6 / 7;
+			grid-row: 1 / 2;
+		}
+
+		@include bp($point_3) {
+			grid-column: 3 / 4;
+			grid-row: 5 / 6;
+			margin-right: calc(var(--gl-indent) * -1);
+			margin-left: -1em;
+		}
+	}
+
+	&:nth-child(6n + 6) {
+		@include bp($point_2, min) {
+			grid-column: 5 / 7;
+			grid-row: 2 / 4;
+		}
+
+		@include bp($point_3) {
+			grid-column: 1 / 4;
+			grid-row: 6 / 7;
+			margin-right: calc(var(--gl-indent) * -1);
+		}
+	}
+}
+
+.gallery__pic {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.gallery__img {
+	@include cover_img;
+}

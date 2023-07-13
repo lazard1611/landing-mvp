@@ -1,0 +1,46 @@
+include ../templates/mixins/m-accordion
+
+section.section.faq.js-section-trigger.js-faq-section
+	.faq__in
+		.faq__row
+			.faq__col_left
+				h2.faq__title.js-title-split We have already answered your questions.
+			.faq__col_right
+				+accordion([
+					{
+						title: 'Where are we based?',
+						descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dignissimos, aut magnam provident iste laborum at accusantium cupiditate fugiat. Consequatur deleniti maxime voluptas suscipit veritatis fuga sapiente porro temporibus architecto.',
+					},
+					{
+						title: 'What is the price of your services?',
+						descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dignissimos, aut magnam provident iste laborum at accusantium cupiditate fugiat. Consequatur deleniti maxime voluptas suscipit veritatis fuga sapiente porro temporibus architecto.',
+					},
+					{
+						title: 'How do I start a project with you?',
+						descr: 'Great question! The first step is to get in touch by filling out our contact form, which you’ll find here. We usually start our projects with a discovery call, followed by a short exploration phase where we work with you to define the project scope and services we can help you with. We’ll then proceed to share our cost estimate, prepare a statement of work and schedule in kickoff calls with our teams. Once the paperwork is complete and the deposit payment is settled, we get to work!',
+					},
+					{
+						title: 'Could you help with the development as well?',
+						descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dignissimos, aut magnam provident iste laborum at accusantium cupiditate fugiat. Consequatur deleniti maxime voluptas suscipit veritatis fuga sapiente porro temporibus architecto.',
+					},
+					{
+						title: 'We already have branding, will you be able to work with the given guidelines?',
+						descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dignissimos, aut magnam provident iste laborum at accusantium cupiditate fugiat. Consequatur deleniti maxime voluptas suscipit veritatis fuga sapiente porro temporibus architecto.',
+					},
+					{
+						title: 'Which tools do you use?',
+						descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dignissimos, aut magnam provident iste laborum at accusantium cupiditate fugiat. Consequatur deleniti maxime voluptas suscipit veritatis fuga sapiente porro temporibus architecto.',
+					},
+					{
+						title: 'What types of user research do you practice?',
+						descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dignissimos, aut magnam provident iste laborum at accusantium cupiditate fugiat. Consequatur deleniti maxime voluptas suscipit veritatis fuga sapiente porro temporibus architecto.',
+					},
+					{
+						title: 'What if I want to extend my own design team with one of your experts?',
+						descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dignissimos, aut magnam provident iste laborum at accusantium cupiditate fugiat. Consequatur deleniti maxime voluptas suscipit veritatis fuga sapiente porro temporibus architecto.',
+					},
+					{
+						title: 'Are my designs secure? ',
+						descr: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dignissimos, aut magnam provident iste laborum at accusantium cupiditate fugiat. Consequatur deleniti maxime voluptas suscipit veritatis fuga sapiente porro temporibus architecto.',
+					},
+				],)

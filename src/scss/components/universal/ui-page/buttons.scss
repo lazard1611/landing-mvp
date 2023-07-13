@@ -10,17 +10,17 @@
 
 .ui_buttons__btn {
 	&.section_ui__btn--mod_1 {
-		@include btn_style_blue;
+		@include btn_style_white;
 		@include btn_size_normal;
 	}
 
 	&.section_ui__btn--mod_2 {
-		@include btn_style_blue;
+		@include btn_style_white;
 		@include btn_size_normal;
 	}
 
 	&.section_ui__btn--mod_3 {
-		@include btn_style_blue;
+		@include btn_style_white;
 		@include btn_size_normal;
 	}
 }

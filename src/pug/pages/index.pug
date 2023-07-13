@@ -1,10 +1,53 @@
 extends ../layout/layout
 
 block vars
-	//- include ../templates/project-vars
-	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index', template_name: 'index'}
+	include ../templates/project-vars
+	include ../templates/mixins/m-projects
+	include ../templates/mixins/m-our-capabilities
+
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Habitat', template_name: 'index'}
 
 block content_block
-	section.section.index_section.demo_mod
-		h1.section_title Hola #[a.test(href='https://glivera-team.com/') Maketodor] :)
+	include ../blocks/hero
+	+projects(projectsData)
+	include ../blocks/logos
+	include ../blocks/team
+	include ../blocks/our-services
+
+	+our_capabilities({
+		title: 'Product design',
+		btn_list: [
+			{ btn: 'User interview & testing' },
+			{ btn: 'User & market research' },
+			{ btn: 'UI design' },
+			{ btn: 'User journey maps & user flows' },
+			{ btn: 'UX/UI & Accessibility audits' },
+			{ btn: 'E-commerce platforms analytics & optimization' },
+			{ btn: 'Rapid prototyping' },
+			{ btn: 'Design systems' },
+			{ btn: 'Lo-fi & Hi-fi wireframing' },
+			{ btn: 'Information Architecture' },
+		]
+	})
+
+	+our_capabilities({
+		title: 'Communication design',
+		btn_list: [
+			{btn: 'Logo design'},
+			{btn: 'Stylescape'},
+			{btn: 'Visual identity'},
+			{btn: 'Web design'},
+			{btn: 'Graphic design'},
+			{btn: 'Illustrations'},
+			{btn: 'Motion design'},
+			{btn: 'Investment decks'},
+			{btn: 'Marketing assets design'},
+		]
+	})
+
+	include ../blocks/our-manifesto
+	include ../blocks/gallery
+	include ../blocks/awards
+	include ../blocks/faq
+
 

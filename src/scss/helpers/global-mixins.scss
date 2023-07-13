@@ -115,14 +115,27 @@
 
 @mixin dashed-border($dashlength, $spacelength, $borderwidth, $color) {
 	$per: percentage($dashlength / ($dashlength + $spacelength));
-	background-image: linear-gradient(to right, $color 0%, $color $per, rgba(0, 0, 0, 0) $per), linear-gradient(to bottom, $color 0%, $color $per, rgba(0, 0, 0, 0) $per),
-		linear-gradient(to right, $color 0%, $color $per, rgba(0, 0, 0, 0) $per), linear-gradient(to bottom, $color 0%, $color $per, rgba(0, 0, 0, 0) $per);
+	background-image: linear-gradient(to right, $color 0%, $color $per, rgba(0, 0, 0, 0) $per),
+		linear-gradient(to bottom, $color 0%, $color $per, rgba(0, 0, 0, 0) $per),
+		linear-gradient(to right, $color 0%, $color $per, rgba(0, 0, 0, 0) $per),
+		linear-gradient(to bottom, $color 0%, $color $per, rgba(0, 0, 0, 0) $per);
 	background-position: (-$spacelength) 0, 0 (-$spacelength), (-$spacelength) 100%, 100% (-$spacelength);
-	background-size: ($dashlength + $spacelength) $borderwidth, $borderwidth ($dashlength + $spacelength), ($dashlength + $spacelength) $borderwidth, $borderwidth ($dashlength + $spacelength);
+	background-size: ($dashlength + $spacelength) $borderwidth, $borderwidth ($dashlength + $spacelength),
+		($dashlength + $spacelength) $borderwidth, $borderwidth ($dashlength + $spacelength);
 	background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
 }
 
-@mixin style_separator($var: false, $var2: false, $var3: false, $var4: false, $var5: false, $var6: false, $var7: false, $var8: false, $var9: false) {
+@mixin style_separator(
+	$var: false,
+	$var2: false,
+	$var3: false,
+	$var4: false,
+	$var5: false,
+	$var6: false,
+	$var7: false,
+	$var8: false,
+	$var9: false
+) {
 	@if $var ==
 		$local_var or
 		$var2 ==
@@ -146,7 +159,17 @@
 	}
 }
 
-@mixin sub_style_separator($var: false, $var2: false, $var3: false, $var4: false, $var5: false, $var6: false, $var7: false, $var8: false, $var9: false) {
+@mixin sub_style_separator(
+	$var: false,
+	$var2: false,
+	$var3: false,
+	$var4: false,
+	$var5: false,
+	$var6: false,
+	$var7: false,
+	$var8: false,
+	$var9: false
+) {
 	@if $var ==
 		$local_var or
 		$var2 ==
@@ -188,7 +211,13 @@
 	appearance: $value;
 }
 
-@mixin flex_block($flex-direction: row, $flex-wrap: wrap, $content: space-between, $align-items: flex-start, $align-content: flex-start) {
+@mixin flex_block(
+	$flex-direction: row,
+	$flex-wrap: wrap,
+	$content: space-between,
+	$align-items: flex-start,
+	$align-content: flex-start
+) {
 	display: flex;
 	flex-direction: $flex-direction;
 	flex-wrap: $flex-wrap;

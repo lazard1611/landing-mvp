@@ -7,14 +7,52 @@
 :root {
 	--full-screen: calc(var(--vh, 1vh) * 100);
 
-	--height-header: 10rem;
-	--height-footer: 10rem;
-	--gl-indent: 5rem;
+	--height-header: 8.8rem;
+	//--height-footer: 10rem;
+
+	@include bp($point_2, min) {
+		--gl-indent: 8rem;
+		--left-indent: 22.4rem;
+	}
+
+	@include bp($point_3) {
+		--gl-indent: 2.4rem;
+	}
 }
 
 html {
 	height: 100%;
-	font: 400 calc(100vw / 1920 * 10) / 1.33 $font_1;
+	font-family: $font_1;
+	font-weight: 400;
+	line-height: 1.33;
+
+	@include bp($point_3, min) {
+		cursor: none !important;
+
+		*:hover {
+			cursor: none !important;
+		}
+	}
+
+	@include bp(1937px, min) {
+		font-size: calc(100vw / 193.7);
+	}
+
+	@include bp(1936px, 1440px) {
+		font-size: 0.45vw;
+	}
+
+	@include bp(1439px, $point_2) {
+		font-size: calc(100vw / 188);
+	}
+
+	@include bp($point_3, $point_7) {
+		font-size: 10px;
+	}
+
+	@include bp($point_7 - 1) {
+		font-size: calc(100vw / 37.5);
+	}
 }
 
 body {
@@ -35,6 +73,10 @@ body {
 	@supports (display: grid) {
 		display: block;
 	}
+
+	.body--open_menu_state {
+		overflow: hidden;
+	}
 }
 
 .preloader {
@@ -43,7 +85,8 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background-color: $white;
+	pointer-events: none;
+	//background-color: $white;
 
 	opacity: 1;
 	transition: opacity 0.3s;
@@ -52,7 +95,24 @@ body {
 
 	.body--loaded & {
 		pointer-events: none;
-		opacity: 0;
+		//opacity: 0;
+	}
+}
+
+.preloader__item {
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
@@ -70,8 +130,10 @@ body {
 
 .base {
 	width: 100%;
+	z-index: 2;
 	position: relative;
 	padding: var(--height-header) 0 0;
+	background-color: $body_bg;
 
 	flex: 1 0 auto;
 }
@@ -97,6 +159,25 @@ html :where(.wp-block) {
 
 .editor-styles-wrapper {
 	overflow-x: hidden;
+}
+
+.cursor {
+	will-change: transform;
+	mix-blend-mode: difference;
+
+	pointer-events: none;
+	border-radius: 50%;
+
+	@include bp($point_2, min) {
+		width: 3.2rem;
+		height: 3.2rem;
+		background-color: $white;
+
+		z-index: 1000;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
 }
 
 //------------------------------------------------------------base styles###

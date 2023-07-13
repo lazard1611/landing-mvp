@@ -266,7 +266,7 @@ mixin social(socialArray)
 
 //- works
 mixin icon(name, mod)
-	- mod = mod || '';
+	- mod = mod || 'icon--size_mod';
 	svg(class=`icon icon_${name} ${mod}`)
 		use(xlink:href=`${assetsImage}sprite/sprite.svg#${name}`)
 
